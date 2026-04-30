@@ -1,0 +1,67 @@
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --Purple: hsl(263, 55%, 52%);
+    --White: hsl(0, 0%, 100%);
+    --Grey: hsl(0, 0%, 81%);
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/* box style  */
+
+
+.box {
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    width: calc(2rem, 5vw, 12rem);
+    color: var(--White);
+}
+
+.box .profile {
+    max-width: 11rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--White);
+}
+
+
+.profile .name {
+    font-weight: bold;
+}
+
+.profile:last-child {
+    color: var(--Grey);
+    font-weight: lighter;
+}
+
+.box img {
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+}
+
+.box h1 {
+    font-weight: 400;
+}
+
+.box p {
+    color: var(--Grey);
+}
+
+
+/* background of the boxes */
+
+.Daniel {
+    background-color: var(--Purple);
+    grid-column: span 2;
+}
