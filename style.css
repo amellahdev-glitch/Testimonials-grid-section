@@ -7,13 +7,17 @@ body {
 :root {
     --Purple: hsl(263, 55%, 52%);
     --White: hsl(0, 0%, 100%);
-    --Grey: hsl(0, 0%, 81%);
+    --GreyText: hsl(0, 0%, 81%);
+    --Grey: hsl(217, 19%, 35%);
+    --darkBleu: hsl(219, 29%, 14%);
 }
 
 
 .container {
+    column-gap: 1.2em;
+    row-gap: 4em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* box style  */
@@ -24,28 +28,31 @@ body {
     padding: 0.5rem 2rem;
     width: calc(2rem, 5vw, 12rem);
     color: var(--White);
+    box-shadow: 0 0 12px var(--darkBleu);
 }
 
 .box .profile {
-    max-width: 11rem;
+    width: fit-content;
     display: flex;
+    gap: 20px;
     justify-content: space-between;
     align-items: center;
     color: var(--White);
 }
 
 
-.profile .name {
+.profile .flex .name {
     font-weight: bold;
 }
 
 .profile:last-child {
-    color: var(--Grey);
+    color: var(--GreyText);
     font-weight: lighter;
 }
 
 .box img {
     border-radius: 50%;
+    border: 2px solid #ffffff50;
     width: 3em;
     height: 3em;
 }
@@ -55,7 +62,7 @@ body {
 }
 
 .box p {
-    color: var(--Grey);
+    color: var(--GreyText);
 }
 
 
@@ -64,4 +71,28 @@ body {
 .Daniel {
     background-color: var(--Purple);
     grid-column: span 2;
+}
+
+.Jonathan {
+    background-color: var(--Grey);
+}
+
+.Jeanette {
+    background-color: var(--White);
+}
+
+/* Jeanette style text on black */
+
+.Jeanette h1 {
+    font-weight: 400;
+    color: var(--darkBleu);
+}
+
+.Jeanette p {
+    color: var(--darkBleu);
+}
+
+.Jeanette .profile:last-child {
+    color: var(--darkBleu);
+    font-weight: lighter;
 }
