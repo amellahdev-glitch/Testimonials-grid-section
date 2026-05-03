@@ -1,13 +1,13 @@
 * {
     padding: 0;
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 400;
     font-style: normal;
-    overflow-y: hidden;
 }
 
 :root {
@@ -41,7 +41,7 @@ main {
 
 .box {
     border-radius: 10px;
-    padding: 0.1rem 1.7rem;
+    padding: 0.8rem 1.7rem;
     color: var(--White);
     box-shadow: 0 0 12px var(--darkBleu);
 }
@@ -58,11 +58,13 @@ main {
 
 .profile .flex .name {
     font-weight: bold;
+    margin: 5px;
 }
 
 .profile:last-child {
     color: var(--GreyText);
     font-weight: lighter;
+    margin: 5px;
 }
 
 .box img {
@@ -73,11 +75,13 @@ main {
 }
 
 .box h1 {
+    margin: 10px;
     font-weight: 400;
     font-size: 1.5rem;
 }
 
 .box p {
+    margin: 10px;
     color: var(--GreyText);
 }
 
@@ -127,4 +131,35 @@ main {
 .kira .profile:last-child {
     color: var(--GreyTextBG);
     font-weight: lighter;
+}
+
+@media (max-width:978px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .box h1 {
+        margin: 20px 0;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+
+    .box p {
+        margin: 20px 0;
+        font-size: 1.3rem;
+        color: var(--GreyText);
+    }
+
+    .Jeanette p,
+    .kira p {
+        color: var(--GreyTextBG);
+    }
+
+    .Jeanette .profile:last-child,
+    .kira .profile:last-child {
+        color: var(--GreyTextBG);
+        font-weight: lighter;
+    }
 }
